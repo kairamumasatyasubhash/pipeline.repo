@@ -8,13 +8,23 @@ pipeline {
         }
         stage ('this is sonar machine') {
         steps {
-            echo "****Scanning the application*******"
+            echo "****Scanning the application"
         }
     }
     stage ('this is for maven machine') {
     steps {
-        echo "*****Implementinng the Applicaton**********"
+        echo "*****Implementinng the Applicaton"
+         }
+       } 
+       stage ('Docker') {
+        steps {
+            echo "*****docker implementing*******"
+         }
+       }
+       stages ('Kubernates') {
+        steps {
+            echo "******implements on kubernates******"
         }
-     }
-   }
-}
+       } 
+     } 
+  } 
