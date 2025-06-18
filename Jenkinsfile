@@ -21,7 +21,7 @@ pipeline {
             echo "*****docker implementing*******"
          }
        }
-       stages ('Kubernates') {
+       stage ('Kubernates') {
         steps {
             echo "******implements on kubernates******"
         }
