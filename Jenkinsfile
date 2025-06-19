@@ -1,6 +1,6 @@
 
 pipeline {
-    aget any
+    agent any
     stages {
         stage ('DockerBuildPush') {
             steps {
