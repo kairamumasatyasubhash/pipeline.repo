@@ -1,30 +1,13 @@
+
 pipeline {
-    agent any
+    aget any
     stages {
-        stage ('Build') {
+        stage ('DockerBuildPush') {
             steps {
-                echo " ***** Building The Appliactio*****"
+                sh "Docker pull nginx"
+                echo "******* Print the images*******"
+                sh  "Docker images"
             }
         }
-        stage ('this is sonar machine') {
-        steps {
-            echo "****Scanning the application"
-        }
     }
-    stage ('this is for maven machine') {
-    steps {
-        echo "*****Implementinng the Applicaton"
-         }
-       } 
-       stage ('Docker') {
-        steps {
-            echo "*****docker implementing*******"
-         }
-       }
-       stage ('Kubernates') {
-        steps {
-            echo "******implements on kubernates******"
-        }
-       } 
-     } 
-  } 
+}
